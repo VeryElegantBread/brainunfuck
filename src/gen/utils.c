@@ -7,9 +7,13 @@ void repeat(char c, int n) {
         putchar(c);
 }
 
-void plus(int amount) { repeat('+', amount); }
+void plus(int amount) {
+    repeat('+', amount);
+}
 
-void minus(int amount) { repeat('-', amount); }
+void minus(int amount) {
+    repeat('-', amount);
+}
 
 void move(int amount) {
     if (amount < 0)
@@ -25,7 +29,9 @@ void go_to(int new_pos) {
     move(diff);
 }
 
-void zero() { printf("[-]"); }
+void zero() {
+    printf("[-]");
+}
 
 void move_cell(int from, int to) {
     go_to(to);
