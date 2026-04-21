@@ -14,7 +14,7 @@ int new_var(Vars *vars, int id)
 int set_var(Vars *vars, int id, int value)
 {
     go_to(vars->vars[id]);
-    zero_cell(vars->vars[id]);
+    zero(vars->vars[id]);
     plus(value);
 }
 
