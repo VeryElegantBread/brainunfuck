@@ -10,4 +10,4 @@ void zero();
 void move_cell(int from, int to);
 void copy_cell(int from, int to);
 
-#endif  // utils_h_INCLUDED
+#endif // utils_h_INCLUDED

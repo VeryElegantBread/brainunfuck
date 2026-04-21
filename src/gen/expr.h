@@ -2,15 +2,15 @@
 #define expr_h_INCLUDED
 
 typedef struct {
-  enum {
-    Int,
-    Var,
-    Read,
-  } type;
-  union {
-    int integer;
-    int id;
-  };
+    enum {
+        Int,
+        Var,
+        Read,
+    } type;
+    union {
+        int integer;
+        int id;
+    };
 } Expr;
 
-#endif  // expr_h_INCLUDED
+#endif // expr_h_INCLUDED
