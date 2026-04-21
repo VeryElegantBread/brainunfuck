@@ -4,12 +4,16 @@
 #include "type.h"
 
 typedef struct {
-    int vars[65535];
+    struct {
+        int loc;
+        Type type;
+    } vars[65535];
     int end;
 } Vars;
 
+#include "expr.h"
+
 int new_var(Vars *vars, int id, Type type);
-void set_var(Vars *vars, int id, int value);
-void add_to_var(Vars *vars, int id, int value);
+void set_var(Vars *vars, int id, Expr expr);
 
 #endif // vars_h_INCLUDED

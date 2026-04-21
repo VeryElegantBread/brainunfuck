@@ -33,7 +33,15 @@ void zero() {
     printf("[-]");
 }
 
+void zero_range(int start, int n) {
+    go_to(start);
+    zero();
+    for (int i = 1; i < n; i++) printf(">[-]");
+}
+
 void move_cell(int from, int to) {
+    if (from == to) return;
+
     go_to(to);
     printf("[-]");
     go_to(from);
