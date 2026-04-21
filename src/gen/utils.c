@@ -34,9 +34,8 @@ void go_to(int new_pos)
     move(diff);
 }
 
-void zero(int pos)
+void zero()
 {
-    go_to(pos);
     printf("[-]");
 }
 
