@@ -3,4 +3,4 @@
 
 extern int pos;
 
-#endif // gen_h_INCLUDED
+#endif  // gen_h_INCLUDED
