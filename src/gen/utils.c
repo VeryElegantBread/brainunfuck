@@ -2,31 +2,46 @@
 
 #include "gen.h"
 
-void repeat(char c, int n) {
-    for (int i = 0; i < n; i++) putchar(c);
+void repeat(char c, int n)
+{
+    for (int i = 0; i < n; i++)
+        putchar(c);
 }
 
-void plus(int amount) {
+void plus(int amount)
+{
     repeat('+', amount);
 }
 
-void minus(int amount) {
+void minus(int amount)
+{
     repeat('-', amount);
 }
 
-void move(int amount) {
-    if (amount < 0) repeat('<', -amount);
-    else repeat('>', amount);
+void move(int amount)
+{
+    if (amount < 0)
+        repeat('<', -amount);
+    else
+        repeat('>', amount);
 
     pos += amount;
 }
 
-void go_to(int new_pos) {
+void go_to(int new_pos)
+{
     int diff = new_pos - pos;
     move(diff);
 }
 
-void move_cell(int from, int to) {
+void zero(int pos)
+{
+    go_to(pos);
+    printf("[-]");
+}
+
+void move_cell(int from, int to)
+{
     go_to(to);
     printf("[-]");
     go_to(from);
@@ -37,7 +52,8 @@ void move_cell(int from, int to) {
     putchar(']');
 }
 
-void copy_cell(int from, int to) {
+void copy_cell(int from, int to)
+{
     go_to(to);
     printf("[-]");
     go_to(from);
