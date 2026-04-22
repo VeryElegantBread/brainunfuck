@@ -4,6 +4,8 @@
 typedef enum {
     U8,
     I8,
+    U16,
+    I16,
 } Type;
 
 int size(Type t);
